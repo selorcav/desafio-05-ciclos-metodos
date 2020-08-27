@@ -1,7 +1,7 @@
 
-        var opcionUsuario = prompt('Escoge un número entre el 1 y el 5', 0);
+        var opcionUsuario = prompt('Escoge un número entre el 1 y el 5', 1);
 
-        while (opcionUsuario > 5 || opcionUsuario < 0 || isNaN(opcionUsuario)) {
+        while (opcionUsuario > 5 || opcionUsuario < 1 || isNaN(opcionUsuario)) {
             opcionUsuario = parseInt(prompt('Tu número es mayor que 5 o menor que 0. Escoge un número del 1 al 5'));
         }
         switch (opcionUsuario) {
@@ -16,12 +16,14 @@
                 break;
             case "4":
                 caso4();
+                break;
             case "5":
                 caso5();
+                break;
         }
 
         function caso1() {
-            let numeroUsuario = parseInt(prompt('Escoge un número del 1 al 100', 0));
+            let numeroUsuario = parseInt(prompt('Escoge un número del 1 al 100', 1));
 
             while (numeroUsuario > 100 || numeroUsuario < 0 || isNaN(numeroUsuario)) {
                 numeroUsuario = parseInt(prompt('Tu número es mayor que 100 o menor que 0. Escoge un número del 1 al 100'));
@@ -72,6 +74,7 @@
             }
         }
         function caso5() {
+
             tuNombre = prompt('Hola ¿Cual es tu nombre?');
             contadorVocales = function (str) {
                 
