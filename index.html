@@ -70,29 +70,33 @@
         }
         function caso4() {
             fruta1 = prompt('Escribe el nombre de una primera fruta');
-            if(fruta1.toLowerCase() != 'manzana'){
+            if (fruta1.toLowerCase() != 'manzana') {
                 console.log(fruta1.toLowerCase());
-            } 
-            fruta2 = prompt('Escribe el nombre de una segunda fruta');
-            if(fruta2.toLowerCase() != 'manzana'){
-                console.log(fruta2.toLowerCase());
-            } 
-            fruta3 = prompt('Escribe el nombre de una tercera fruta');
-            if(fruta3.toLowerCase() != 'manzana'){
-                console.log(fruta3.toLowerCase());
-            } 
-        }
-        function caso5(){
-            tuNombre = prompt('Hola ¿Cual es tu nombre?');
-            let vocales = 'aeiouAEIOU';
-            let contador = 0;
-
-            for(var i=0; i<str.length; i++){
-                if(vocales.indexOf(str[i] !== -1)){
-                    console.log('el numero es ' + str[i]);
-                    contador +=1;
-                }
             }
+            fruta2 = prompt('Escribe el nombre de una segunda fruta');
+            if (fruta2.toLowerCase() != 'manzana') {
+                console.log(fruta2.toLowerCase());
+            }
+            fruta3 = prompt('Escribe el nombre de una tercera fruta');
+            if (fruta3.toLowerCase() != 'manzana') {
+                console.log(fruta3.toLowerCase());
+            }
+        }
+        function caso5() {
+            tuNombre = prompt('Hola ¿Cual es tu nombre?');
+            contadorVocales = function (str) {
+                
+                var vocales = 'aeiouAEIOU';
+                var contador = 0;
+
+                for (var i = 0; i < str.length; i++) {
+                    if (vocales.indexOf(str[i]) !== -1) {
+                        contador += 1;
+                    }
+                }
+                return contador
+            }
+            alert('Tu nombre tiene ' + contadorVocales(tuNombre) + ' vocales y ' + parseInt(tuNombre.length-contadorVocales(tuNombre)) + ' consonantes');
         }
     </script>
 </body>
